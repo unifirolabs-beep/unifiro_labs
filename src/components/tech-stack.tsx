@@ -36,7 +36,7 @@ export function TechStack() {
                     modern brands and scalable digital products.
                 </h2>
                 <p className="max-w-3xl mx-auto text-lg text-white/60 font-light">
-                    BrandandBrandz uses reliable, industry-proven tools to deliver fast performance,
+                    Unifiro Labs uses reliable, industry-proven tools to deliver fast performance,
                     clean user experiences, and long-term reliability.
                 </p>
             </div>

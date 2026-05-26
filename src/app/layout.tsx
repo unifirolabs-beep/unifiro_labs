@@ -4,7 +4,7 @@ import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "Brand and Brandz",
+  title: "Unifiro Labs",
   description: "",
 };
 

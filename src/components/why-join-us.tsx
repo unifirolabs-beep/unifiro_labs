@@ -237,7 +237,7 @@ export function WhyJoinUs() {
                             values your creativity, growth and impact.
                         </p>
                         <p className="text-gray-400 font-light text-base sm:text-lg">
-                            At BrandandBrandz, we create an environment where ideas thrive, <br className="hidden sm:block" />
+                            At Unifiro Labs, we create an environment where ideas thrive, <br className="hidden sm:block" />
                             careers grow, and work makes real impact.
                         </p>
                     </motion.div>

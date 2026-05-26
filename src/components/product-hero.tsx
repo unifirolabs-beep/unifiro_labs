@@ -39,7 +39,7 @@ export function ProductHero() {
                 </h1>
 
                 <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-                    At Brand & Brandz, products aren't experiments; they're intentional systems built to solve real-world problems where trust and execution matter.
+                    At Unifiro Labs, products aren't experiments; they're intentional systems built to solve real-world problems where trust and execution matter.
                 </p>
             </motion.div>
         </section>

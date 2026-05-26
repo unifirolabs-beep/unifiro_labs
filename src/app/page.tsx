@@ -84,9 +84,6 @@ function PlatformCard({ title, subtitle, href }: { title: string, subtitle: stri
 
 
 export default function App() {
-  const [showVideo, setShowVideo] = useState(false);
-  const [videoEnded, setVideoEnded] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -95,61 +92,6 @@ export default function App() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-
-  useEffect(() => {
-    const hasPlayedVideo = sessionStorage.getItem('brandIntroPlayed');
-
-    if (!hasPlayedVideo) {
-      setShowVideo(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (videoRef.current && showVideo) {
-      videoRef.current.play().catch(err => {
-        console.log("Auto-play prevented:", err);
-      });
-    }
-  }, [showVideo]);
-
-  const handleVideoEnd = () => {
-    setVideoEnded(true);
-    sessionStorage.setItem('brandIntroPlayed', 'true');
-    setTimeout(() => {
-      setShowVideo(false);
-    }, 500);
-  };
-
-  const skipVideo = () => {
-    sessionStorage.setItem('brandIntroPlayed', 'true');
-    setShowVideo(false);
-  };
-
-  if (showVideo) {
-    return (
-      <div className="fixed inset-0 bg-black flex items-center justify-center z-50">
-        <div className="relative w-full h-full flex items-center justify-center">
-          <video
-            ref={videoRef}
-            className={`w-full h-full object-contain transition-opacity duration-500 ${videoEnded ? 'opacity-0' : 'opacity-100'}`}
-            onEnded={handleVideoEnd}
-            playsInline
-            muted
-          >
-            <source src="/brandandbrandzLogo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-
-          <button
-            onClick={skipVideo}
-            className="absolute cursor-pointer bottom-8 right-8 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg backdrop-blur-sm transition-all"
-          >
-            Skip Intro
-          </button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className={"bg-black text-white relative " + raleway.className}>
@@ -268,7 +210,7 @@ export default function App() {
               <h2 className="text-4xl sm:text-6xl font-bold text-white tracking-tighter">A strong brand doesn't need to shout.</h2>
               <h2 className="text-4xl sm:text-6xl font-bold text-white mt-2 tracking-tighter">It needs to be clear.</h2>
               <p className="mt-8 max-w-2xl mx-auto text-xl text-white/90 font-light leading-relaxed">
-                It earns trust before attention and belief before growth. <br className="hidden md:block" /> That's what we build at Brand & Brandz.
+                It earns trust before attention and belief before growth. <br className="hidden md:block" /> That's what we build at Unifiro Labs.
               </p>
               <Button variant="outline" className="mt-12 border-white bg-white text-black hover:bg-gray-100 px-12 py-8 text-xl rounded-full transition-all hover:scale-105 active:scale-95 shadow-xl">
                 Begin Your Brand Journey

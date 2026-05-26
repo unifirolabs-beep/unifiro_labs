@@ -11,7 +11,7 @@ export function SiteFooter() {
         { icon: Globe, href: "#" }, // Google
         { icon: MessageCircle, href: "#" }, // WhatsApp
         { icon: Phone, href: "tel:+919158857575" },
-        { icon: Mail, href: "mailto:contact@brandandbrandz.com" },
+        { icon: Mail, href: "mailto:contact@unifirolabs.com" },
     ];
 
     const homeLinks = [
@@ -69,8 +69,8 @@ export function SiteFooter() {
                         >
                             <Link href={"/"}>
                                 <Image
-                                    src="/logo.png"
-                                    alt="Brand & Brandz"
+                                    src="/unifirolabs.png"
+                                    alt="Unifiro Labs"
                                     width={150}
                                     height={80}
                                     className="object-contain"
@@ -141,7 +141,7 @@ export function SiteFooter() {
                     transition={{ delay: 0.5 }}
                 >
                     <p className="text-white/40 text-sm">
-                        Copyright © {new Date().getFullYear()} Brandandbrandz
+                        Copyright © {new Date().getFullYear()} Unifiro Labs
                     </p>
                 </motion.div>
             </div>

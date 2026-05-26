@@ -46,7 +46,7 @@ export function AnimatedFooter() {
                 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6 leading-tight"
                 style={titleStyle}
             >
-                At Brand & Brandz, our services exist for one reason
+                At Unifiro Labs, our services exist for one reason
             </h2>
 
             <p

@@ -175,7 +175,7 @@ export function Timeline() {
                         title="Innovation"
                         delay={0.8}
                         content={[
-                            { year: "2025", text: "Launched platforms: DailyGo, Unifiro, Brand & Brandz." },
+                            { year: "2025", text: "Launched platforms: DailyGo, Unifiro, Unifiro Labs." },
                             { year: "2025", text: "Adopted an execution-first approach for real-world use cases." },
                             { year: "2025", text: "Prioritized user adoption and measurable impact." },
                             { year: "2025", text: "Progressing toward sustainable ecosystem growth." }

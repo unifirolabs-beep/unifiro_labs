@@ -42,7 +42,7 @@ export default function ServicesPage() {
                             <p
                                 className="text-[24px] text-white/70 mb-12 font-normal leading-normal max-w-5xl mx-auto"
                             >
-                                At Brand & Brandz, services are not standalone offerings.
+                                At Unifiro Labs, services are not standalone offerings.
                                 <br className="hidden sm:block" />
                                 They are connected systems designed to take a business from idea to sustained growth.
                             </p>
@@ -151,7 +151,7 @@ export default function ServicesPage() {
                                 index={3}
                                 href="/services/branding-creative"
                                 title="Branding & Creative<br/>Design"
-                                description="Creativity at Brand & Brandz is always guided by purpose."
+                                description="Creativity at Unifiro Labs is always guided by purpose."
                                 images={[
                                     {
                                         src: "/servicespage/cards.webp",

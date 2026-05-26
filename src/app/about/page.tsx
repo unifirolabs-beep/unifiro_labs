@@ -32,7 +32,7 @@ export default function About() {
                         </h1>
 
                         <p className="max-w-4xl mx-auto text-[24px] text-gray-300 font-normal leading-relaxed">
-                            Brand & Brandz helps founders and businesses turn ideas into trusted brands and
+                            Unifiro Labs helps founders and businesses turn ideas into trusted brands and
                             systems with clarity before growth.
                         </p>
 

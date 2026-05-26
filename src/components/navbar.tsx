@@ -117,7 +117,7 @@ export function Navbar() {
                 <nav className={`mx-auto flex items-center justify-between w-full ${isDesktop ? 'h-28' : 'h-16'}`}>
                     {/* Logo (Left) */}
                     <Link href="/" onClick={() => setIsOpen(false)} className="relative z-[120] flex-shrink-0">
-                        <Image src="/logo.png" width={110} height={110} alt="logo" className={`cursor-pointer w-auto ${isDesktop ? 'h-18' : 'h-12'}`} />
+                        <Image src="/unifirolabs.png" width={110} height={110} alt="Unifiro Labs" className={`cursor-pointer w-auto ${isDesktop ? 'h-18' : 'h-12'}`} />
                     </Link>
 
                     {/* Desktop Links (Center-Right) */}

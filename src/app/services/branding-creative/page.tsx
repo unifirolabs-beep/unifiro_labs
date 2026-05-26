@@ -94,7 +94,7 @@ export default function BrandingCreativeDesignPage() {
                     style={{ lineHeight: "1.6" }}
                     variants={itemVariants}
                 >
-                    Creativity at Brand & Brandz is always guided by strategy and intent.
+                    Creativity at Unifiro Labs is always guided by strategy and intent.
                 </motion.p>
 
                 <motion.p

@@ -14,8 +14,8 @@ export function ContactGrid() {
         {
             icon: Mail,
             title: "Email Us",
-            content: "contact@brandandbrandz.com",
-            href: "mailto:contact@brandandbrandz.com"
+            content: "contact@unifirolabs.com",
+            href: "mailto:contact@unifirolabs.com"
         },
         {
             icon: Phone,
