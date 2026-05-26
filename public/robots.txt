@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://unifirolabs.com
+
+# Sitemaps
+Sitemap: https://unifirolabs.com/sitemap.xml
