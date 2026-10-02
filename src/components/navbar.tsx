@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Home, Info, Briefcase, Package, GraduationCap, Mail, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -16,6 +17,7 @@ const navLinks = [
 ];
 
 export function Navbar() {
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -54,7 +56,7 @@ export function Navbar() {
         return <div className="h-24" />;
     }
 
-    const pillContainerVariants = {
+    const pillContainerVariants: Variants = {
         closed: {
             opacity: 0,
             transition: {
@@ -71,14 +73,14 @@ export function Navbar() {
         },
     };
 
-    const pillItemVariants = {
+    const pillItemVariants: Variants = {
         closed: { opacity: 0, y: 20, x: 20 },
         open: {
             opacity: 1,
             y: 0,
             x: 0,
             transition: {
-                type: "spring" as any,
+                type: "spring",
                 stiffness: 300,
                 damping: 24
             }
@@ -117,20 +119,23 @@ export function Navbar() {
                 <nav className={`mx-auto flex items-center justify-between w-full ${isDesktop ? 'h-28' : 'h-16'}`}>
                     {/* Logo (Left) */}
                     <Link href="/" onClick={() => setIsOpen(false)} className="relative z-[120] flex-shrink-0">
-                        <Image src="/unifirolabs.png" width={110} height={110} alt="Unifiro Labs" className={`cursor-pointer w-auto ${isDesktop ? 'h-18' : 'h-12'}`} />
+                        <Image src="/unifirolabs.png" width={150} height={150} alt="Unifiro Labs" className={`cursor-pointer w-auto ${isDesktop ? 'h-24' : 'h-12'}`} />
                     </Link>
 
                     {/* Desktop Links (Center-Right) */}
                     <div className="hidden lg:flex items-center gap-12">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className={`text-[17px] tracking-tight transition-all hover:text-white ${link.name === 'Home' ? 'font-bold text-white' : 'font-medium text-white/80'}`}
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className={`text-[17px] tracking-tight transition-all hover:text-white ${isActive ? 'font-bold text-white' : 'font-medium text-white/80'}`}
+                                >
+                                    {link.name}
+                                </Link>
+                            );
+                        })}
                         <Link href="/contact">
                             <Button variant="default" className="text-black bg-white hover:bg-gray-100 rounded-full px-8 py-6 text-sm font-bold shadow-xl transition-all hover:scale-105 active:scale-95">
                                 Contact us
@@ -151,20 +156,29 @@ export function Navbar() {
                             variants={pillContainerVariants}
                             className="flex flex-col items-end gap-3 mb-6"
                         >
-                            {navLinks.map((link) => (
-                                <motion.div key={link.name} variants={pillItemVariants} className="w-fit">
-                                    <Link
-                                        href={link.href}
-                                        onClick={() => setIsOpen(false)}
-                                        className="bg-[#121212]/95 backdrop-blur-xl border border-white/10 rounded-full pl-6 pr-4 py-3 flex items-center justify-end gap-5 text-white active:scale-95 shadow-2xl group transition-all"
-                                    >
-                                        <span className="text-[17px] font-medium tracking-tight text-white/90">{link.name}</span>
-                                        <div className="bg-white/5 p-2 rounded-full border border-white/5 group-hover:bg-white/10 transition-colors">
-                                            <link.icon className="w-5 h-5 text-white/70" strokeWidth={1.5} />
-                                        </div>
-                                    </Link>
-                                </motion.div>
-                            ))}
+                            {navLinks.map((link) => {
+                                const isActive = pathname === link.href;
+                                return (
+                                    <motion.div key={link.name} variants={pillItemVariants} className="w-fit">
+                                        <Link
+                                            href={link.href}
+                                            onClick={() => setIsOpen(false)}
+                                            className={`rounded-full pl-6 pr-4 py-3 flex items-center justify-end gap-5 active:scale-95 shadow-2xl group transition-all border ${
+                                                isActive 
+                                                    ? 'bg-white/10 border-white/20 text-white' 
+                                                    : 'bg-[#121212]/95 border-white/10 text-white/90'
+                                            } backdrop-blur-xl`}
+                                        >
+                                            <span className={`text-[17px] tracking-tight ${isActive ? 'font-bold text-white' : 'font-medium text-white/90'}`}>
+                                                {link.name}
+                                            </span>
+                                            <div className="bg-white/5 p-2 rounded-full border border-white/5 group-hover:bg-white/10 transition-colors">
+                                                <link.icon className="w-5 h-5 text-white/70" strokeWidth={1.5} />
+                                            </div>
+                                        </Link>
+                                    </motion.div>
+                                );
+                            })}
                             <motion.div variants={pillItemVariants} className="w-fit">
                                 <Link href="/contact" onClick={() => setIsOpen(false)}>
                                     <div className="bg-white rounded-full pl-6 pr-4 py-3 flex items-center justify-end gap-5 text-black active:scale-95 shadow-2xl group transition-all">
@@ -194,8 +208,6 @@ export function Navbar() {
                     </motion.div>
                 </button>
             </div>
-
-            {/* Removed spacer to allow hero to float behind */}
         </>
     );
 }

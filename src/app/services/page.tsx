@@ -2,12 +2,24 @@ import { Navbar } from "@/components/navbar";
 import { Raleway } from "next/font/google";
 import { ServiceCard } from "@/components/service-card";
 import { AnimatedFooter } from "@/components/animated-footer";
+import { constructMetadata, servicesSchema } from "@/config/seo";
+
+export const metadata = constructMetadata({
+    title: "Our Services",
+    description: "Explore services at Unifiro Labs. From brand strategy and custom platform engineering to AI intelligence integration.",
+    canonical: "/services",
+});
 
 const raleway = Raleway({ weight: ["400", "500", "600", "700", "900"], subsets: ["latin"] });
 
 export default function ServicesPage() {
     return (
-        <div
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+            />
+            <div
             className={
                 "min-h-screen bg-black text-white relative " +
                 raleway.className
@@ -229,5 +241,6 @@ export default function ServicesPage() {
                 </main>
             </div>
         </div>
+        </>
     );
 }

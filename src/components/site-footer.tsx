@@ -3,13 +3,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Globe, MessageCircle, Phone, Mail } from "lucide-react";
+import { Linkedin, Instagram, Phone, Mail } from "lucide-react";
 
 export function SiteFooter() {
     const socialIcons = [
         { icon: Linkedin, href: "#" },
-        { icon: Globe, href: "#" }, // Google
-        { icon: MessageCircle, href: "#" }, // WhatsApp
+        { icon: Instagram, href: "https://www.instagram.com/unifirolabs?stkn=N214aGxwZHV2eGho" },
         { icon: Phone, href: "tel:+919158857575" },
         { icon: Mail, href: "mailto:contact@unifirolabs.com" },
     ];
@@ -71,8 +70,8 @@ export function SiteFooter() {
                                 <Image
                                     src="/unifirolabs.png"
                                     alt="Unifiro Labs"
-                                    width={150}
-                                    height={80}
+                                    width={200}
+                                    height={100}
                                     className="object-contain"
                                 />
                             </Link>
@@ -85,6 +84,7 @@ export function SiteFooter() {
                                 <motion.a
                                     key={idx}
                                     href={item.href}
+                                    target="_blank"
                                     className="text-white/70 hover:text-white transition-colors"
                                     whileHover={{ scale: 1.2, y: -2 }}
                                     whileTap={{ scale: 0.95 }}

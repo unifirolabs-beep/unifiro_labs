@@ -1,0 +1,1 @@
+Add meta tags and schema markup to every page. Also add sitemap.xml and robots.txt. (Title, description, keywords, etc) for home, about, services, products, contact and career. Create a global seo, then focus on each page.
