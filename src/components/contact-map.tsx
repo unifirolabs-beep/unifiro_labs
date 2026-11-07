@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { siteConfig } from "@/config/seo";
 
 export function ContactMap() {
     return (
@@ -34,14 +35,14 @@ export function ContactMap() {
             >
                 {/* Google Maps Embed */}
                 <iframe
-                    src="https://maps.google.com/maps?q=Brand%20%26%20Brandz%20Horamavu&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src={siteConfig.mapsEmbedUrl}
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen={true}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Brand and Brandz Location"
+                    title="Unifiro Labs Headquarters in Sindhanur, Raichur, Karnataka"
                     className="w-full h-full"
                 ></iframe>
             </motion.div>

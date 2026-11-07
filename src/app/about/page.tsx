@@ -9,8 +9,8 @@ import { Navbar } from "@/components/navbar";
 import { constructMetadata, aboutPageSchema } from "@/config/seo";
 
 export const metadata = constructMetadata({
-    title: "About Us",
-    description: "Learn about Unifiro Labs. We help founders and businesses turn ideas into trusted brands and systems with clarity, innovation, and long-term vision.",
+    title: "About Us | Unifiro Labs - Sindhanur, Raichur, Karnataka",
+    description: "Learn about Unifiro Labs, an innovative technology and brand growth engineering company headquartered in Sindhanur, Raichur, Karnataka.",
     canonical: "/about",
 });
 

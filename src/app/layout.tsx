@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
 import { Toaster } from "sonner";
-import { constructMetadata, organizationSchema, websiteSchema } from "@/config/seo";
+import { constructMetadata, organizationSchema, websiteSchema, localBusinessSchema } from "@/config/seo";
 
 export const metadata: Metadata = constructMetadata();
 
@@ -17,7 +17,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([organizationSchema, websiteSchema]),
+            __html: JSON.stringify([organizationSchema, websiteSchema, localBusinessSchema]),
           }}
         />
       </head>

@@ -5,8 +5,8 @@ import { AnimatedFooter } from "@/components/animated-footer";
 import { constructMetadata, servicesSchema } from "@/config/seo";
 
 export const metadata = constructMetadata({
-    title: "Our Services",
-    description: "Explore services at Unifiro Labs. From brand strategy and custom platform engineering to AI intelligence integration.",
+    title: "Our Services | Custom Software, AI & Brand Growth in Karnataka",
+    description: "Explore services at Unifiro Labs in Sindhanur, Raichur, Karnataka. We deliver brand strategy, custom platform engineering, and AI systems built for scale.",
     canonical: "/services",
 });
 

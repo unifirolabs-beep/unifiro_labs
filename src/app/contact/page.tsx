@@ -6,8 +6,8 @@ import { Inter } from "next/font/google";
 import { constructMetadata, contactPageSchema } from "@/config/seo";
 
 export const metadata = constructMetadata({
-    title: "Contact Us",
-    description: "Get in touch with Unifiro Labs. Let's discuss your brand strategy, technology needs, or platform engineering requirements.",
+    title: "Contact Unifiro Labs | Office in Sindhanur, Raichur, Karnataka",
+    description: "Visit or contact Unifiro Labs at our headquarters in Sindhanur, Raichur, Karnataka. Connect with our engineering and growth team for software, AI, and digital platforms.",
     canonical: "/contact",
 });
 

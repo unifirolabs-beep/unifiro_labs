@@ -10,7 +10,7 @@ export function SiteFooter() {
         { icon: Linkedin, href: "#" },
         { icon: Instagram, href: "https://www.instagram.com/unifirolabs?stkn=N214aGxwZHV2eGho" },
         { icon: Phone, href: "tel:+919158857575" },
-        { icon: Mail, href: "mailto:contact@unifirolabs.com" },
+        { icon: Mail, href: "mailto:info@unifirolabs.com" },
     ];
 
     const homeLinks = [

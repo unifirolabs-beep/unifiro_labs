@@ -8,6 +8,7 @@ import { z } from "zod";
 import { createContactAction } from "@/actions/contactActions";
 import { toast } from "sonner";
 import { useState } from "react";
+import { siteConfig } from "@/config/seo";
 
 const contactSchema = z.object({
   firstName: z.string().min(1, "First Name is required"),
@@ -61,20 +62,20 @@ export function ContactGrid() {
     {
       icon: MapPin,
       title: "Our Address",
-      content: "1st Floor, Palmarcade, Horamavu Main Road, Kalkere, Bengaluru - 560043",
-      href: "https://maps.google.com/?q=1st+Floor,Palmarcade,Horamavu+Main+Road,Kalkere,Bengaluru-560043",
+      content: `${siteConfig.address.streetAddress}, ${siteConfig.address.addressLocality}, ${siteConfig.address.addressRegion} ${siteConfig.address.postalCode}`,
+      href: siteConfig.mapsUrl,
     },
     {
       icon: Mail,
       title: "Email Us",
-      content: "contact@unifirolabs.com",
-      href: "mailto:contact@unifirolabs.com",
+      content: siteConfig.email,
+      href: `mailto:${siteConfig.email}`,
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "+91 91588 57575",
-      href: "tel:+919158857575",
+      content: siteConfig.phone,
+      href: `tel:${siteConfig.telephone}`,
     },
   ];
 
