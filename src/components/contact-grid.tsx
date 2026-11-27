@@ -74,7 +74,7 @@ export function ContactGrid() {
     {
       icon: Phone,
       title: "Call Us",
-      content: siteConfig.phone,
+      content: "7353700444, 9353857575, 9353393168",
       href: `tel:${siteConfig.telephone}`,
     },
   ];

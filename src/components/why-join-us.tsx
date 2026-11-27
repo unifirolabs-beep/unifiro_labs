@@ -179,7 +179,7 @@ function Card({ card }: { card: CardData }) {
                         src={card.customBg}
                         alt={card.title}
                         fill
-                        className="object-cover"
+                        className="object-cover brightness-125"
                         priority
                     />
                     {/* Dark overlay for text readability on hover */}

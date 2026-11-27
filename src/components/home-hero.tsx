@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Playball, Raleway } from "next/font/google";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const playball = Playball({ subsets: ["latin"], weight: "400" });
 const raleway = Raleway({ subsets: ["latin"], weight: ["400", "700"] });
@@ -88,9 +89,11 @@ export function HomeHero() {
             variants={fadeInUp}
             className="flex justify-center mt-12"
           >
-            <Button className="text-white bg-gradient-to-r from-[#727987] to-[#1B6396] border border-white/20 hover:from-[#828997] hover:to-[#2B73A6] rounded-full px-12 py-7 text-lg font-medium transition-all duration-300 hover:translate-y-[-2px] shadow-[0_10px_40px_rgba(27,99,150,0.3)]">
+          <Link href="/contact">
+              <Button className="text-white bg-gradient-to-r from-[#727987] to-[#1B6396] border border-white/20 hover:from-[#828997] hover:to-[#2B73A6] rounded-full px-12 py-7 text-lg font-medium transition-all duration-300 hover:translate-y-[-2px] shadow-[0_10px_40px_rgba(27,99,150,0.3)]">
               Contact Us
             </Button>
+          </Link>
           </motion.div>
         </div>
       </motion.div>
